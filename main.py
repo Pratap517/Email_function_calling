@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 
 # load_dotenv()
-openai.api_key = ""
+openai.api_key = " api key"
 
 app = FastAPI()
 
@@ -94,29 +94,3 @@ def analyse_email(email: Email):
         "category": category,
         "nextStep": nextStep,
     }
-
-
-# email = """
-# Dear Jason
-# I hope this message finds you well. I'm Shirley from Gucci;
-
-# I'm looking to purchase some company T-shirt for my team, we are a team of 100k people, and we want to get 2 t-shirt per personl
-
-# Please let me know the price and timeline you can work with;
-
-# Lookingforward
-
-# Shirley Lou
-# """
-
-# prompt = f"Please extract key information from this email: {email} "
-# message = [{"role": "user", "content": prompt}]
-
-# response = openai.ChatCompletion.create(
-#     model="gpt-4-0613",
-#     messages=message,
-#     functions = function_descriptions,
-#     function_call="auto"
-# )
-
-# print(response)
